@@ -29,8 +29,12 @@ Folder layout expected:
 import torch
 import pandas as pd
 from pathlib import Path
-from torch.utils.data import Dataset, DataLoader
+from torch.utils.data import Dataset, DataLoader, Subset
 import math
+import random
+random.seed(42)
+
+subset = True
 
 # Paths
 GT_DEV       = Path("data/FSD50K.ground_truth/dev.csv")
@@ -99,38 +103,36 @@ class FSD50KDataset(Dataset):
     split     : "train", "val", or "eval" — subfolder inside preprocessed/
     """
 
+class FSD50KDataset(Dataset):
     def __init__(self, df: pd.DataFrame, split: str):
-        self.df        = df.reset_index(drop=True)
         self.split_dir = PREPROCESSED / split
+        # Pre-build lists for fast access — avoids DataFrame lookup on every sample
+        self.fnames = df["fname"].tolist()
+        self.labels = df["labels"].tolist()
 
     def __len__(self) -> int:
-        return len(self.df)
+        return len(self.fnames)
 
     def __getitem__(self, idx: int):
-        row  = self.df.iloc[idx]
-        path = self.split_dir / f"{row['fname']}.pt"
+        path = self.split_dir / f"{self.fnames[idx]}.pt"
 
         # 1. Load preprocessed spectrogram — shape (1, 128, time_frames)
         spec = torch.load(path, weights_only=True)
 
-        # Repeat or truncate to FRAME_COUNT
+        # 2. Repeat or truncate to FRAME_COUNT
         n = spec.shape[-1]
         if n < FRAME_COUNT:
-        # repeat enough times to cover FRAME_COUNT, then trim
             repeats = math.ceil(FRAME_COUNT / n)
             spec = spec.repeat(1, 1, repeats)
-
-        # Trim to exact length (handles both repeated and long clips)
         spec = spec[:, :, :FRAME_COUNT]
 
         # 3. Normalize
-        spec = (spec - NORM_MEAN) / (NORM_STD + 1e-6) # add small epsilon to avoid division by zero
+        spec = (spec - NORM_MEAN) / (NORM_STD + 1e-6)
 
         # 4. Encode labels
-        label = encode_labels(row["labels"])   # (200,)
+        label = encode_labels(self.labels[idx])
 
         return spec, label
-
 # ─────────────────────────────────────────────
 # 4. DATALOADERS
 # ─────────────────────────────────────────────
@@ -145,6 +147,11 @@ val_df   = dev_csv[dev_csv["split"] == "val"]
 eval_df  = eval_csv
 
 train_dataset = FSD50KDataset(train_df, "train")
+if subset == True:
+    # Use a random subset of 2000 clips for fast iteration
+    subset_indices = random.sample(range(len(train_dataset)), 2000)
+    train_dataset  = Subset(train_dataset, subset_indices)
+
 val_dataset   = FSD50KDataset(val_df,   "val")
 eval_dataset  = FSD50KDataset(eval_df,  "eval")
 
