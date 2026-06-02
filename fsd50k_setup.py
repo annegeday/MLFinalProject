@@ -103,7 +103,6 @@ class FSD50KDataset(Dataset):
     split     : "train", "val", or "eval" — subfolder inside preprocessed/
     """
 
-class FSD50KDataset(Dataset):
     def __init__(self, df: pd.DataFrame, split: str):
         self.split_dir = PREPROCESSED / split
         # Pre-build lists for fast access — avoids DataFrame lookup on every sample
