@@ -43,8 +43,8 @@ GT_VOCAB     = Path("data/FSD50K.ground_truth/vocabulary.csv")
 PREPROCESSED = Path("preprocessed")
 
 # Normalization constants — Insert from save specs notebook 
-NORM_MEAN = -21.5820
-NORM_STD  =  20.2802
+NORM_MEAN = -17.9358
+NORM_STD  =  20.7367
 
 # Clip length - can be changed to test different values
 CLIP_SECONDS = 6    # seconds
@@ -57,7 +57,7 @@ HOP_LENGTH   = 256
 FRAME_COUNT  = int(CLIP_SECONDS * SAMPLE_RATE / HOP_LENGTH)  # time frames
 
 # Training - batch size can be changed to test different values
-BATCH_SIZE   = 32
+BATCH_SIZE   = 8
 NUM_WORKERS  = 0     # change to match needed/available worker
 
 
