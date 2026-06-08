@@ -1,0 +1,10 @@
+Best val mAP: 0.6340
+Hyperparameters:
+  Learning rate: 5.794088198249058e-05
+  Dropout: 0.20101305365481736
+  Batch size: 32
+  Weight decay: 0.0001
+Epochs trained (ignoring early stopping): 30
+Classes: 6
+Number of samples: 36796
+Date: 2026-06-07 16:12
