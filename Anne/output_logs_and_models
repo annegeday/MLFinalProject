@@ -1,0 +1,7 @@
+Final models and logs. 
+
+Vocab:
+- full_model_9: Oversampling only 
+- full_model_10: Focal loss + bias initilization
+- full_model_12: Baseline
+- full_model_13: Oversampling + spec augmentation + mixup augmentation
