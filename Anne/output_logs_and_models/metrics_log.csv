@@ -1,0 +1,91 @@
+full_model_0
+50 epochs, no oversampling, no spec augment, random crop, with scheduler, no focal loss, with bias initialization, early stopping with patience 15, 6 seconds, n_mels=64
+metric,value
+mAP,0.3766
+d_prime,2.3806
+lwlrap,0.6617
+
+full_model_1
+100 epochs, no oversampling, no spec augment, random crop, with scheduler, with focal loss, with bias initialization, early stopping with patience 15, 6 seconds, n_mels=64
+metric,value
+mAP,0.3743
+d_prime,2.455
+lwlrap,0.6585
+
+full_model_2
+100 epochs, with oversampling, no spec augment, random crop, with scheduler, no focal loss, with bias initialization, early stopping with patience 10, 6 seconds, n_mels=64
+metric,value
+mAP,0.398
+d_prime,2.354
+lwlrap,0.6727
+
+full_model_3
+100 epochs, with oversampling, no spec augment, no focal loss, random crop, scheduler, bias initialization, early stopping with patience 10, 6 seconds, n_mels=128
+metric,value
+mAP,0.38
+d_prime,2.3146
+lwlrap,0.6521
+
+full_model_4
+100 epochs, with oversampling, no spec augment, no focal loss, middle crop, scheduler, bias initialization, early stopping with patience 10, 6 seconds, n_mels=128
+metric,value
+mAP,0.3773
+d_prime,2.3143
+lwlrap,0.6539
+
+full_model_4
+100 epochs, with oversampling, no spec augment, no focal loss, middle crop, scheduler, bias initialization, early stopping with patience 10, 6 seconds, n_mels=128
+metric,value
+mAP,0.3773
+d_prime,2.3143
+lwlrap,0.6539
+
+full_model_6
+10 epochs, 4 blocks, new classifier, with oversampling, no spec augment, no focal loss, middle crop, scheduler, bias initialization, early stopping with patience 10, 6 seconds, n_mels=128
+metric,value
+mAP,0.4311
+d_prime,2.4235
+lwlrap,0.6788
+
+full_model_7
+100 epochs, 4 blocks, new classifier, with oversampling, no spec augment, no focal loss, random crop, scheduler, bias initialization, early stopping with patience 20, 6 seconds, n_mels=128
+metric,value
+mAP,0.4685
+d_prime,2.5262
+lwlrap,0.6993
+
+full_model_9
+100 epochs, 4 blocks, new classifier, with oversampling, no spec augment, no focal loss, random crop, scheduler, no bias initialization, early stopping with patience 15, 6 seconds, n_mels=128
+metric,value
+mAP,0.4661
+d_prime,2.4736
+lwlrap,0.6915
+
+full_model_10
+100 epochs, 4 blocks, new classifier, no oversampling, no spec augment, with focal loss, random crop, scheduler, with bias initialization, early stopping with patience 15, 6 seconds, n_mels=128
+metric,value
+mAP,0.4723
+d_prime,2.569
+lwlrap,0.6992
+
+full_model_11
+100 epochs, 4 blocks, new classifier, with oversampling, with spec augment, no focal loss, random crop, scheduler, no bias initialization, early stopping with patience 15, 6 seconds, n_mels=128
+metric,value
+mAP,0.484
+d_prime,2.5694
+lwlrap,0.7093
+
+full_model_12
+100 epochs, 4 blocks, new classifier, no oversampling, no spec augment, no focal loss, random crop, scheduler, no bias initialization, early stopping with patience 15, 6 seconds, n_mels=128
+metric,value
+mAP,0.4642
+d_prime,2.5361
+lwlrap,0.7031
+
+full_model_13
+100 epochs, 4 blocks, new classifier, with oversampling, with spec augment, with mixup, no focal loss, random crop, scheduler, no bias initialization, early stopping with patience 15, 6 seconds, n_mels=128
+metric,value
+mAP,0.4922
+d_prime,2.5779
+lwlrap,0.7078
+

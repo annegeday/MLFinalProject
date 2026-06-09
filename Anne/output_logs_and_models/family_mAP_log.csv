@@ -1,0 +1,154 @@
+full_model_0
+50 epochs, no oversampling, no spec augment, random crop, with scheduler, no focal loss, with bias initialization, early stopping with patience 15, 6 seconds, n_mels=64
+family,mAP
+Human sounds,0.7989
+Animal,0.6232
+Music,0.9249
+Natural sounds,0.6157
+Sounds of things,0.8095
+Source-ambiguous sounds,0.4268
+overall,0.6998
+
+full_model_1
+100 epochs, no oversampling, no spec augment, random crop, with scheduler, with focal loss, with bias initialization, early stopping with patience 15, 6 seconds, n_mels=64
+family,mAP
+Human sounds,0.8093
+Animal,0.6332
+Music,0.9217
+Natural sounds,0.599
+Sounds of things,0.804
+Source-ambiguous sounds,0.4544
+overall,0.7036
+
+full_model_2
+100 epochs, with oversampling, no spec augment, random crop, with scheduler, no focal loss, with bias initialization, early stopping with patience 10, 6 seconds, n_mels=64
+family,mAP
+Human sounds,0.8097
+Animal,0.6341
+Music,0.9123
+Natural sounds,0.6161
+Sounds of things,0.8023
+Source-ambiguous sounds,0.4182
+overall,0.6988
+
+full_model_3
+100 epochs, with oversampling, no spec augment, no focal loss, random crop, scheduler, bias initialization, early stopping with patience 10, 6 seconds, n_mels=128
+family,mAP
+Human sounds,0.7706
+Animal,0.6253
+Music,0.903
+Natural sounds,0.5837
+Sounds of things,0.7864
+Source-ambiguous sounds,0.4012
+overall,0.6784
+
+full_model_4
+100 epochs, with oversampling, no spec augment, no focal loss, middle crop, scheduler, bias initialization, early stopping with patience 10, 6 seconds, n_mels=128
+family,mAP
+Human sounds,0.7671
+Animal,0.6359
+Music,0.9043
+Natural sounds,0.5964
+Sounds of things,0.7826
+Source-ambiguous sounds,0.3895
+overall,0.6793
+
+full_model_4
+100 epochs, with oversampling, no spec augment, no focal loss, middle crop, scheduler, bias initialization, early stopping with patience 10, 6 seconds, n_mels=128
+family,mAP
+Human sounds,0.7671
+Animal,0.6359
+Music,0.9043
+Natural sounds,0.5964
+Sounds of things,0.7826
+Source-ambiguous sounds,0.3895
+overall,0.6793
+
+full_model_5
+10 epochs, with oversampling, no spec augment, no focal loss, middle crop, scheduler, bias initialization, early stopping with patience 10, 6 seconds, n_mels=128
+family,mAP
+Human sounds,0.5679
+Animal,0.3674
+Music,0.8491
+Natural sounds,0.4565
+Sounds of things,0.6128
+Source-ambiguous sounds,0.2841
+overall,0.523
+
+full_model_6
+10 epochs, 4 blocks, new classifier, with oversampling, no spec augment, no focal loss, middle crop, scheduler, bias initialization, early stopping with patience 10, 6 seconds, n_mels=128
+family,mAP
+Human sounds,0.836
+Animal,0.6734
+Music,0.9277
+Natural sounds,0.6599
+Sounds of things,0.8501
+Source-ambiguous sounds,0.4663
+overall,0.7356
+
+full_model_7
+100 epochs, 4 blocks, new classifier, with oversampling, no spec augment, no focal loss, random crop, scheduler, bias initialization, early stopping with patience 20, 6 seconds, n_mels=128
+family,mAP
+Human sounds,0.8578
+Animal,0.7179
+Music,0.9334
+Natural sounds,0.7101
+Sounds of things,0.8606
+Source-ambiguous sounds,0.5451
+overall,0.7708
+
+full_model_9
+100 epochs, 4 blocks, new classifier, with oversampling, no spec augment, no focal loss, random crop, scheduler, no bias initialization, early stopping with patience 15, 6 seconds, n_mels=128
+family,mAP
+Human sounds,0.8539
+Animal,0.6789
+Music,0.9345
+Natural sounds,0.6689
+Sounds of things,0.8681
+Source-ambiguous sounds,0.5064
+overall,0.7518
+
+full_model_10
+100 epochs, 4 blocks, new classifier, no oversampling, no spec augment, with focal loss, random crop, scheduler, with bias initialization, early stopping with patience 15, 6 seconds, n_mels=128
+family,mAP
+Human sounds,0.8501
+Animal,0.7125
+Music,0.9365
+Natural sounds,0.7085
+Sounds of things,0.858
+Source-ambiguous sounds,0.5371
+overall,0.7671
+
+full_model_11
+100 epochs, 4 blocks, new classifier, with oversampling, with spec augment, no focal loss, random crop, scheduler, no bias initialization, early stopping with patience 15, 6 seconds, n_mels=128
+family,mAP
+Human sounds,0.8711
+Animal,0.7102
+Music,0.9452
+Natural sounds,0.7065
+Sounds of things,0.8683
+Source-ambiguous sounds,0.5272
+overall,0.7714
+
+full_model_12
+100 epochs, 4 blocks, new classifier, no oversampling, no spec augment, no focal loss, random crop, scheduler, no bias initialization, early stopping with patience 15, 6 seconds, n_mels=128
+family,mAP
+Human sounds,0.8596
+Animal,0.6977
+Music,0.938
+Natural sounds,0.6852
+Sounds of things,0.8575
+Source-ambiguous sounds,0.5295
+overall,0.7613
+
+full_model_13
+100 epochs, 4 blocks, new classifier, with oversampling, with spec augment, with mixup, no focal loss, random crop, scheduler, no bias initialization, early stopping with patience 15, 6 seconds, n_mels=128
+family,mAP
+Human sounds,0.859
+Animal,0.7261
+Music,0.9407
+Natural sounds,0.7141
+Sounds of things,0.8736
+Source-ambiguous sounds,0.5364
+overall,0.775
+
