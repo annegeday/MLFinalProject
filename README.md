@@ -1,5 +1,5 @@
 # Group 18 repository for Final Project in AppML 2026 (UCPH)
-**School and course:** University of Copenhagen, Applied Machine Learning 2026 (NFYK20002U)
+**School and course:** University of Copenhagen, Niels Bohr Institute, Applied Machine Learning 2026 (NFYK20002U)
 
 **Group members:** Anne Kirstine Geday Overgaard (vpn272@alumni.ku.dk), Liva Julie Smidt (rsh344@alumni.ku.dk), Mikas Raith Møller Knudsen (zvn840@alumni.ku.dk)
 
